@@ -3,19 +3,16 @@ import Topbar from "../src/components/topbar/Topbar";
 import Sidebar from "../src/components/sidebar/Sidebar"
 import Home from "./pages/home/Home"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import UserList from "../src/pages/userList/UserList"
+import User from "../src/pages/userpage/User"
 
 function App() {
   return (
-    <Router>
-      <div className="App">
+    <Router> 
       <Topbar/>  
       <div className="container">
         <Sidebar/>
-        {/* <Switch>
+        <Switch>
           <Route exact path="/">
             <Home/>
           </Route>
@@ -23,10 +20,12 @@ function App() {
           <Route path="/users">
             <UserList/>
           </Route>
-        </Switch> */}
-        <Home/>
+
+          <Route path="/user/:userId">
+            <User/>
+          </Route>
+        </Switch>
       </div>
-    </div>
     </Router>
   );
 }
