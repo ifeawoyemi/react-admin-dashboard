@@ -1,5 +1,5 @@
 import "./user.css"
-import { CalendarToday, LocationSearching, MailOutline, PermIdentity, PhoneAndroid } from "@material-ui/icons"
+import { CalendarToday, LocationSearching, MailOutline, PermIdentity, PhoneAndroid, Publish } from "@material-ui/icons"
 
 export default function User() {
   return (
@@ -105,7 +105,17 @@ export default function User() {
                         />
                       </div>
                     </div>
-                    <div className="userUpdateRight"></div>
+                    <div className="userUpdateRight">
+                        <div className="userUpdateUpload">
+                            <img src="https://images.pexels.com/photos/7319030/pexels-photo-7319030.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                            alt="" 
+                            className="userUpdateImg" 
+                            />
+                            <label htmlFor="file"><Publish/></label>
+                            <input type="file" id="file" style={{display: "none"}}/>
+                        </div>
+                        <button className="userUpdateButton">Update</button>
+                    </div>
                 </form>
             </div>
         </div>
